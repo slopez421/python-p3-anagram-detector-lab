@@ -2,13 +2,13 @@
 
 class Anagram: 
     def __init__(self, word):
-        self.word = word
+       self.word = word
 
-    def match(self, list):
-        matches = []
+    def match(self, lists):
+        list = []
+        for words in lists:
+            if sorted([letter for letter in self.word]) == sorted([letter for letter in words]):
+                list.append(words)
 
-        for words in list:
-            if sorted(self.word) == sorted(words):
-                matches.append(words)
-            
-        return matches
+        return list
+        
